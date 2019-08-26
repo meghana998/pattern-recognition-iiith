@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <script src="Chart.bundle.js"></script>
+    <script src="Chart.bundle.min.js"></script>
+    <script src="Chart.js"></script>
+    <script src="Chart.min.js"></script>
+    <link rel="stylesheet" href="Chart.min.css">
+    <link rel="stylesheet" href="Chart.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+  </head>
+  <body>
+    <h1>PATTERN RECOGNITION:RANDOM VARIBLES</h1>
+    <div id="chart" style="width: 900px; float:left; height:900px; background:gray; margin:10px">
+      <canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+    </div>
+    <div id="calculations"style="width: 300px; float:left; height:900px; border:1px solid lightblue; margin:10px ;padding:"5px 5px">
+      <div id="LoadCustomDatasets" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
+        <h5>Load Custom Datasets:</h5>
+        Class1
+        <select id="class1" class="selectdiv">
+           <option value="T1">T1</option>
+          <option value="T2">T2</option>
+          <option value="T3">T3</option>
+          <option value="T4">T4</option>
+        </select>
+        <input type="button" id="load" value="  Load  "Onclick=""></input>
+      </div>
+      <div id="markpoints" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
+         <h5>Mark Points:</h5>
+        <input type="button" id="testpoint" value="  Test Point "Onclick=""></input>
+        <input type="button" id="clear" value="  clear  "Onclick=""></input>
+      </div>
+      <div id="classification_DDAG" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
+        <h5>Classification DDAG:</h5>
+        <input type="button" id="start" value="  start  "Onclick=""></input>
+        <input type="button" id="next" value="  next  "Onclick=""></input><br>
+        Current Classifier: <input type="text" name="currentclassifier" value="" readonly><br>
+        Current Class:<input type="text" name="currentclass" value="" readonly>
+      </div>
+      <div id="ResizeAxes" style="border:1px solid lightblue;height: 150px width:300px;margin:20px ;padding:5px ">
+        <input type="button" id="Resize" value="  ResizeAxes  "Onclick=""></input>
+      </div>
+    </div>
+  </body>
+</html>
