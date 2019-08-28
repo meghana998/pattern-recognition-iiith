@@ -1,4 +1,4 @@
-var ctx = document.getElementById('line-chart');
+var ctx = document.getElementById('linechart');
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {

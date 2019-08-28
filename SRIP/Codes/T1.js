@@ -1,4 +1,4 @@
-var ctx = document.getElementById('line-chart');
+var ctx = document.getElementById('linechart');
 var myChart = new Chart(ctx, {
   type: 'line',
   scaleOverride: true,
@@ -9,26 +9,22 @@ var myChart = new Chart(ctx, {
         label: "T1",
         showLine: false,
         borderColor:[ 
-        "#8e7ea2",//class1
-        "#8e7ea2",//class1
-        "#8e5ea2",//class2
-        "#8e5ea2",//class2
-        "#3cba9f",//class3
-        "#e8c3b9",//class4
-        "#e8c3b9",//class4
+        "red",//class1
+        "red",//class1
+        "blue",//class2
+        "blue",//class2
+        "green",//class3
+        "green",//class3
+        "yellow",//class4
+        "yellow",//class4
         ],
-        fill: false,
+       // fill: false,
          
       }
     ]
-  },
-  scaleSteps: 40,
-  scaleStepWidth: 40,
-  scaleStartValue: 0,  
+  }, 
   options: {
     showLines: false ,
-    lineHeight: 1,
-    lineWidth: 2,
      scales: {
                 ticks: {
                 max: 0.7,
@@ -38,6 +34,6 @@ var myChart = new Chart(ctx, {
         },
       legend: {
     display: false,
-}
+          }
   }
 });

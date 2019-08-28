@@ -1,51 +1,86 @@
 <html>
   <head>
-    <script src="Chart.bundle.js"></script>
-    <script src="Chart.bundle.min.js"></script>
-    <script src="Chart.js"></script>
-    <script src="Chart.min.js"></script>
-    
+    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.bundle.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.bundle.min.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.min.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/jquery.min.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.min.css">
+    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.css">
+    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/font-awesome.min.css">
+
+    <script src="markpoints.js"></script>
     <!--script src="T2.js"></script>
+    <script src="T1.js"></script>
     <script src="T3.js"></script>
     <script src="T4.js"></script-->
-    <link rel="stylesheet" href="Chart.min.css">
-    <link rel="stylesheet" href="Chart.css">
     <link rel="stylesheet" href="dropdown.css">
-    <link rel="stylesheet" href="font-awesome.min.css">
-  </head>
-  <body>
-    <h1>PATTERN RECOGNITION:RANDOM VARIBLES</h1>
-    <div id="chart" style="width: 900px; float:left; height:900px; background:#D3D3D3; margin:10px">
-      <canvas id="line-chart" width="400" height="400"></canvas>
-<script src="T1.js"></script>
-    </div>
-    <div id="calculations"style="width: 300px; float:left; height:900px; border:1px solid lightblue; margin:10px ;padding:"5px 5px">
-      <div id="LoadCustomDatasets" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
-        <h5>Load Custom Datasets:</h5>
-        Class1
-        <select id="class1" class="selectdiv">
-           <option value="T1">T1</option>
-          <option value="T2">T2</option>
-          <option value="T3">T3</option>
-          <option value="T4">T4</option>
-        </select>
-        <input type="button" id="load" value="  Load  "Onclick=""></input>
-      </div>
-      <div id="markpoints" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
-         <h5>Mark Points:</h5>
-        <input type="button" id="testpoint" value="  Test Point "Onclick=""></input>
-        <input type="button" id="clear" value="  clear  "Onclick=""></input>
-      </div>
-      <div id="classification_DDAG" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
-        <h5>Classification DDAG:</h5>
-        <input type="button" id="start" value="  start  "Onclick=""></input>
-        <input type="button" id="next" value="  next  "Onclick=""></input><br>
-        Current Classifier: <input type="text" name="currentclassifier" value="" readonly><br>
-        Current Class:<input type="text" name="currentclass" value="" readonly>
-      </div>
-      <div id="ResizeAxes" style="border:1px solid lightblue;height: 150px width:300px;margin:20px ;padding:5px ">
-        <input type="button" id="Resize" value="  ResizeAxes  "Onclick=""></input>
-      </div>
-    </div>
-  </body>
+    <link rel="stylesheet" href="css1.css">
+    
+</head>
+<body>
+<h1>PATTERN RECOGNITION:RANDOM VARIBLES</h1>
+
+<div id="calculations"style="width: 300px; float:right; height:900px; border:1px solid lightblue; margin:10px ;padding: 5px 5px">
+
+
+  <div id="LoadCustomDatasets" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
+    <h5>Load Custom Datasets:</h5>
+    Class1:
+    <button id="btn1">T1</button>
+    <button id="btn2">T2</button>
+    <button id="btn3">T3</button>
+    <button id="btn4">T4</button>
+    </br>
+    "click to load"
+  </div>
+
+
+  <div id="markpoints" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
+    <h5>Mark Points:</h5>
+    <input type="button" id="testpoint" value="  Test Point "Onclick="markpoints()"></input>
+    <input type="button" id="clear" value="  clear  "Onclick=""></input>
+  </div>
+
+
+  <div id="classification_DDAG" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
+    <h5>Classification DDAG:</h5>
+    <input type="button" id="start" value="  start  "Onclick=""></input>
+    <input type="button" id="next" value="  next  "Onclick=""></input><br>
+    Current Classifier: <input type="text" name="currentclassifier" value="" readonly><br>
+    Current Class:<input type="text" name="currentclass" value="" readonly>
+  </div>
+
+
+  <div id="ResizeAxes" style="border:1px solid lightblue;height: 150px width:300px;margin:20px ;padding:5px ">
+    <input type="button" id="Resize" value="  ResizeAxes  "Onclick=""></input>
+  </div>
+
+
+</div>
+
+
+
+
+<h4 style="writing-mode: vertical-rl;text-orientation: upright;float:left;">Y-aixs</h4>
+<div id="chart" style="width: 900px; float:left; height:900px; background:#D3D3D3; margin:10px">
+
+  <canvas id="linechart" width="400" height="400"style="cursor:crosshair;"></canvas>
+  
+  <script src="load.js"></script>
+
+  <label style="text-align:center"><h4>X-aixs</h4></label>
+  <div style="text-align:center">
+    <span class="dot1"></span>Class1
+    <span class="dot2"></span>Class2
+    <span class="dot3"></span>Class3
+    <span class="dot4"></span>Class4
+    <span class="dot5"></span>Test
+  </div>
+</div>
+    
+
+
+</body>
 </html>
