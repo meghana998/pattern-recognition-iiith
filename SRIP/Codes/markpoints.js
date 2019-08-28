@@ -18,12 +18,12 @@ function drawCoordinates(x,y){
     var ctx = document.getElementById("linechart").getContext("2d");
 
 
-    ctx.fillStyle = "#ffffff"; // color
+    ctx.fillStyle = "#800080"; // color
 
     ctx.beginPath();
     ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
     ctx.fill();
 }
-function clear(){
-    //call load function again
-}
+
+           
+         
