@@ -187,12 +187,13 @@ var myChart = new Chart(ctx, {
   data: data,
   options: {
     showLines: false ,
-     scales: {
+    responsive: true,
+    scales: {
                 ticks: {
                 max: 10.0,
                 min: -10.0,
                 stepSize: 0.1
-                }
+                },
           
         },
       legend: {
@@ -275,7 +276,7 @@ document.getElementById('btn4').onclick = function() {
 document.getElementById('btn5').onclick = function() {
   myChart.destroy();
   myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'scatter',
     data: data,
     options: {
         showLines: false ,
