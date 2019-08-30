@@ -44,7 +44,7 @@ var data = {
       }
     ]
 };
-
+       
 var data2 = {
 	 datasets: [{ 
          data: [
@@ -59,7 +59,7 @@ var data2 = {
             y: -0.70
          }, {
             x: -0.6,
-            y: -0.70
+            y: -0.80
          },
          {
             x: 0.2,
@@ -303,9 +303,6 @@ document.getElementById('btn5').onclick = function() {
   document.getElementById("next").disabled = false;
 };
 
-
-
-
 function markpoints(){ 
       $("#linechart").click(function(e){
      getPosition(e); 
@@ -328,14 +325,14 @@ function getPosition(event){
   var currentclass=document.getElementById('currentclass');
   currentclass.value=" ";
      if(datasetno==1){
-       x11=0.3;y11=0.20;
-       x12=0.4;y12=0.30;
-       x21=-0.4;y21=-0.30;
-       x22=-0.3;y22=-0.20;
-       x31=-0.2;y31=-0.4;
-       x32=0.3;y32=-0.20;
-       x41=-0.7;y41=0.30;
-       x42=-0.4;y42=0.60;
+       x11=534;y11=366.5625;
+       x12=605;y12=282.5625;
+       x21=36;y21=786.5625;
+       x22=106;y22=702.5625;
+       x31=462;y31=869.5625;
+       x32=534;y32=701.5625;
+       x41=817;y41=282.5625;
+       x42=38;y42=32.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -346,14 +343,14 @@ function getPosition(event){
        dist32=Math.sqrt(Math.pow(x-x32,2)+Math.pow(y-y32,2));
      }
      if(datasetno==2){
-       x11=0.3;y11=0.20;
-       x12=0.4;y12=0.30;
-       x21=-0.4;y21=-0.30;
-       x22=-0.3;y22=-0.20;
-       x31=-0.2;y31=-0.4;
-       x32=0.3;y32=-0.20;
-       x41=-0.7;y41=0.30;
-       x42=-0.4;y42=0.60;
+       x11=767;y11=167.5625;
+       x12=890;y12=5.5625;
+       x21=35;y21=815.5625;
+       x22=159;y22=815.5625;
+       x31=646;y31=653.5625;
+       x32=708;y32=545.5625;
+       x41=98;y41=599.5625;
+       x42=159;y42=625.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -364,14 +361,14 @@ function getPosition(event){
        dist32=Math.sqrt(Math.pow(x-x32,2)+Math.pow(y-y32,2));
      }
      if(datasetno==3){
-       x11=0.3;y11=0.20;
-       x12=0.4;y12=0.30;
-       x21=-0.4;y21=-0.30;
-       x22=-0.3;y22=-0.20;
-       x31=-0.2;y31=-0.4;
-       x32=0.3;y32=-0.20;
-       x41=-0.7;y41=0.30;
-       x42=-0.4;y42=0.60;
+       x11=699;y11=5.5625;
+       x12=889;y12=6.5625;
+       x21=132;y21=761.5625;
+       x22=36;y22=870.5625;
+       x31=414;y31=653.5625;
+       x32=321;y32=436.5625;
+      x41=416;y41=542.5625;
+       x42=224;y42=543.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -382,14 +379,14 @@ function getPosition(event){
        dist32=Math.sqrt(Math.pow(x-x32,2)+Math.pow(y-y32,2));
      }
      if(datasetno==4){
-       x11=0.3;y11=0.20;
-       x12=0.4;y12=0.30;
-       x21=-0.4;y21=-0.30;
-       x22=-0.3;y22=-0.20;
-       x31=-0.2;y31=-0.4;
-       x32=0.3;y32=-0.20;
-       x41=-0.7;y41=0.30;
-       x42=-0.4;y42=0.60;
+       x11=178;y11=695.5625;
+       x12=37;y12=781.5625;
+       x21=606;y21=265.5625;
+       x22=536;y22=352.5625;
+       x31=178;y31=868.5625;
+       x32=108;y32=696.5625;
+       x41=818;y41=264.5625;
+       x42=606;y42=7.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -404,7 +401,7 @@ function getPosition(event){
        classifier.value=" 1 vs 4";
        min1=Math.min(dist11,dist12);
        min2=Math.min(dist41,dist42);
-     //  alert(x+" "+y+"  "+min1+" "+min2);
+      
        if(min1>min2){class4=1;currentclass.value="Not 1";}
        else{class1=1; currentclass.value=" Not 4";}
        };
