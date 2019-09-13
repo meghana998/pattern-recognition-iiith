@@ -27,19 +27,18 @@ var data = {
             x: -0.4,
             y: 0.60
          }],
-        label: "T1",
         showLine: false,
-        borderColor:[ 
+        backgroundColor:[ 
         "red",//class1
         "red",//class1
         "blue",//class2
         "blue",//class2
         "green",//class3
         "green",//class3
-        "yellow",//class4
-        "yellow",//class4
+        "black",//class4
+        "black",//class4
         ],
-       // fill: false,
+       fill: false,
          
       }
     ]
@@ -75,15 +74,15 @@ var data2 = {
             y: -0.40
          }],
         label: "T2",
-        borderColor:[ 
+        backgroundColor:[ 
          "red",//class1
         "red",//class1
         "blue",//class2
         "blue",//class2
         "green",//class3
         "green",//class3
-        "yellow",//class4
-        "yellow",//class4
+        "black",//class4
+        "black",//class4
         ],
         fill: false
       }
@@ -120,15 +119,15 @@ var data3 = {
             y: -0.30
          }],
         label: "T3",
-        borderColor:[ 
+        backgroundColor:[ 
          "red",//class1
         "red",//class1
         "blue",//class2
         "blue",//class2
         "green",//class3
         "green",//class3
-        "yellow",//class4
-        "yellow",//class4
+        "black",//class4
+        "black",//class4
         ],
         fill: false
       }
@@ -165,15 +164,15 @@ var data4 = {
             y: 0.60
          }],
         label: "T4",
-        borderColor:[ 
+        backgroundColor:[ 
          "red",//class1
         "red",//class1
         "blue",//class2
         "blue",//class2
         "green",//class3
         "green",//class3
-        "yellow",//class4
-        "yellow",//class4
+        "black",//class4
+        "black",//class4
         ],
         fill: false
     }
@@ -208,7 +207,22 @@ document.getElementById('btn1').onclick = function() {
   myChart.destroy();
   myChart = new Chart(ctx, {
     type: 'scatter',
-    data: data
+    data: data,
+    options: {
+    showLines: false ,
+     scales: {
+                 ticks: {
+                max: 10.0,
+                min: -10.0,
+                stepSize: 0.1
+                }
+          
+        },
+      legend: {
+         display: false,
+        }
+    }
+
   });
   document.getElementById("next").disabled = false;
 };
@@ -315,7 +329,7 @@ function getPosition(event){
      var x = event.clientX - rect.left;
      var y = event.clientY - rect.top;
      drawCoordinates(x,y);
-    // alert("x="+x+" y="+y);
+    //alert("x="+x+" y="+y);
   var class1=0,class2=0,class3=0,class4=0;
   var dis11=0,dist12=0,dist21=0,dist22=0,dis31=0,dist32=0,dist41=0,dist42=0,min1=0,min2=0;
   var x11,y11,x12,y12,x21,y21,x22,y22,x31,y31,x32,y32,x41,y41,x42,y42;
@@ -325,14 +339,14 @@ function getPosition(event){
   var currentclass=document.getElementById('currentclass');
   currentclass.value=" ";
      if(datasetno==1){
-       x11=534;y11=366.5625;
-       x12=605;y12=282.5625;
-       x21=36;y21=786.5625;
-       x22=106;y22=702.5625;
-       x31=462;y31=869.5625;
-       x32=534;y32=701.5625;
-       x41=817;y41=282.5625;
-       x42=38;y42=32.5625;
+       x11=305.46875;y11=147.5625;
+       x12=272.46875;y12=186.5625;
+       x21=71.46875;y21=341.5625;
+       x22=37.46875;y22=381.5625;
+       x31=273.46875;y31=341.5625;
+       x32=237.46875;y32=419.5625;
+       x41=405.46875;y41=147.5625;
+       x42=36.46875;y42=31.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -343,14 +357,14 @@ function getPosition(event){
        dist32=Math.sqrt(Math.pow(x-x32,2)+Math.pow(y-y32,2));
      }
      if(datasetno==2){
-       x11=767;y11=167.5625;
-       x12=890;y12=5.5625;
-       x21=35;y21=815.5625;
-       x22=159;y22=815.5625;
-       x31=646;y31=653.5625;
-       x32=708;y32=545.5625;
-       x41=98;y41=599.5625;
-       x42=159;y42=625.5625;
+       x11=438.46875;y11=5.5625;
+       x12=382.46875;y12=84.5625;
+       x21=37.46875;y21=392.5625;
+       x22=93.46875;y22=419.5625;
+       x31=323.46875;y31=315.5625;
+       x32=353.46875;y32=262.5625;
+       x41=95.46875;y41=315.5625;
+       x42=65.46875;y42=290.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -361,14 +375,14 @@ function getPosition(event){
        dist32=Math.sqrt(Math.pow(x-x32,2)+Math.pow(y-y32,2));
      }
      if(datasetno==3){
-       x11=699;y11=5.5625;
-       x12=889;y12=6.5625;
-       x21=132;y21=761.5625;
-       x22=36;y22=870.5625;
-       x31=414;y31=653.5625;
-       x32=321;y32=436.5625;
-      x41=416;y41=542.5625;
-       x42=224;y42=543.5625;
+       x11=350.46875;y11=5.5625;
+       x12=439.46875;y12=6.5625;
+       x21=81.46875;y21=368.5625;
+       x22=37.46875;y22=419.5625;
+       x31=172.46875;y31=212.5625;
+       x32=216.46875;y32=314.5625;
+       x41=125.46875;y41=263.5625;
+       x42=214.46875;y42=263.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));
@@ -379,14 +393,14 @@ function getPosition(event){
        dist32=Math.sqrt(Math.pow(x-x32,2)+Math.pow(y-y32,2));
      }
      if(datasetno==4){
-       x11=178;y11=695.5625;
-       x12=37;y12=781.5625;
-       x21=606;y21=265.5625;
-       x22=536;y22=352.5625;
-       x31=178;y31=868.5625;
-       x32=108;y32=696.5625;
-       x41=818;y41=264.5625;
-       x42=606;y42=7.5625;
+       x11=104.46875;y11=338.5625;
+       x12=38.46875;y12=377.5625;
+       x21=306.46875;y21=130.5625;
+       x22=272.46875;y22=170.5625;
+       x31=70.46875;y31=336.5625;
+       x32=104.46875;y32=419.5625;
+       x41=405.46875;y41=129.5625;
+       x42=304.46875;y42=6.5625;
        dist11=Math.sqrt(Math.pow(x-x11,2)+Math.pow(y-y11,2));
        dist12=Math.sqrt(Math.pow(x-x12,2)+Math.pow(y-y12,2));
        dist41=Math.sqrt(Math.pow(x-x41,2)+Math.pow(y-y41,2));

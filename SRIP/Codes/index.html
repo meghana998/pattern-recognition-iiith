@@ -1,14 +1,14 @@
 <html>
   <head>
-    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.bundle.js"></script>
-    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.bundle.min.js"></script>
-    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.js"></script>
-    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.min.js"></script>
-    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/jquery.min.js"></script>
-    <script src="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/jquery.validate.min.js"></script>
-    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.min.css">
-    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/Chart.css">
-    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip/pattern-recognition-iiith/SRIP/Libraries/font-awesome.min.css">
+    <script src="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/Chart.bundle.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/Chart.bundle.min.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/Chart.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/Chart.min.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/jquery.min.js"></script>
+    <script src="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/Chart.min.css">
+    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/Chart.css">
+    <link rel="stylesheet" href="C:/Users/Meghana/Documents/srip remote intern/pattern-recognition-iiith/SRIP/Libraries/font-awesome.min.css">
 
     <!--script src="markpoints.js"></script>
     <script src="T2.js"></script>
@@ -19,34 +19,27 @@
     <link rel="stylesheet" href="css1.css">
     
 </head>
-<body>
-<h1>PATTERN RECOGNITION:RANDOM VARIBLES</h1>
+<body style="overflow: auto;">
+<h1><center>Generation of Random Variables</center></h1>
 
-<div id="calculations"style="width: 300px; float:right; height:800px; border:1px solid lightblue; margin:10px ;padding: 5px 5px">
+<div id="calculations"style="width: 300px; float:right; height:540px; border:1px solid lightblue; margin:10px ;padding: 5px 5px">
 
 
   <div id="LoadCustomDatasets" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
-    <h5>Load Custom Datasets:</h5>
-    Class1:
-    <button id="btn1">T1</button>
-    <button id="btn2">T2</button>
-    <button id="btn3">T3</button>
-    <button id="btn4">T4</button>
-    </br>
-    "click to load"
+    <h5>Click to load load Custom Datasets</h5>
+    DataSets:
+    <pre> <button id="btn1">T1</button> <button id="btn2">T2</button>  <button id="btn3">T3</button>  <button id="btn4">T4</button></pre>
   </div>
 
 
   <div id="markpoints1" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
     <h5>Mark Points:</h5>
-    <input type="button" id="testpoint" value="  Test Point "Onclick="markpoints()"></input>
-    <button id="btn5">Clear</button>
+    <pre><input type="button" id="testpoint" value="  Test Point "Onclick="markpoints()"></input>  <button id="btn5">Clear</button></pre>
   </div>
    
   <div id="classification_DDAG" style="border:1px solid lightblue;height: 150px width:300px;margin:20px;padding:5px ">
     <h5>Classification DDAG:</h5>
-    <input type="button" id="start" value="  start  "></input>
-    <input type="button" id="next" value="  next  "></input><br>
+   <pre><input type="button" id="start" value="  start  "></input>  <input type="button" id="next" value="  next  "></input></pre><br>
     Current Classifier: <input type="text" id="classifier" value=" " readonly><br>
     Current Class:<input type="text" id="currentclass"value=" " readonly>
   </div>
@@ -58,14 +51,14 @@
 
 </div>
 
-<h4 style="writing-mode: vertical-rl;text-orientation: upright;float:left;">Y-aixs</h4>
-<div id="chart" style="width: 900px; float:left; height:900px; background:#D3D3D3; margin:10px">
+<h4 style="writing-mode: vertical-rl;text-orientation: upright;float:left;">marks</h4>
+<div id="chart" style="width: 450px; float:left; height:450px; background:#D3D3D3; margin:10px">
 
   <canvas id="linechart" width="400" height="400"style="cursor:crosshair;"></canvas>
   
   <script src="load.js"></script>
 
-  <label style="text-align:center"><h4>X-aixs</h4></label>
+  <label style="text-align:center"><h4>Roll Numbers</h4></label>
   <div style="text-align:center">
     <span class="dot1"></span>Class1
     <span class="dot2"></span>Class2
